@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="margin">10dp</dimen>
+    <dimen name="padding">88dp</dimen>
+    <dimen name="text_size">16dp</dimen>
+    
+    <dimen name="circle_stroke_width">10dp</dimen>
+    <dimen name="polygon_stroke_width">5dp</dimen>
+    <dimen name="polyline_width">3dp</dimen>
+    
+</resources>
