@@ -15,19 +15,22 @@
  */
 package pl.mg6.newmaps.demo;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
+import com.google.android.gms.common.GooglePlayServicesUtil;
 
-public class LauncherActivity extends Activity {
+import android.app.Activity;
+import android.os.Bundle;
+import android.text.util.Linkify;
+import android.widget.TextView;
+
+public class AboutActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
-		Intent intent = new Intent(this, MainActivity.class);
-		startActivity(intent);
-
-		finish();
+		setContentView(R.layout.about);
+		TextView about = (TextView) findViewById(R.id.about_textview);
+		String text = GooglePlayServicesUtil.getOpenSourceSoftwareLicenseInfo(this);
+		about.setText(text);
+		Linkify.addLinks(about, Linkify.WEB_URLS);
 	}
 }

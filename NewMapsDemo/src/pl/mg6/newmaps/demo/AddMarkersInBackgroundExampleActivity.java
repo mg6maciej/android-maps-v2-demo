@@ -1,3 +1,18 @@
+/*
+ * Copyright (C) 2013 Maciej Górski
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package pl.mg6.newmaps.demo;
 
 import java.util.Arrays;
@@ -23,7 +38,7 @@ public class AddMarkersInBackgroundExampleActivity extends FragmentActivity {
 	private GoogleMap map;
 
 	private LatLngDistance[] positions = new LatLngDistance[ManyMarkersExampleActivity.MARKERS_COUNT];
-	private int count = ManyMarkersExampleActivity.MARKERS_COUNT;
+	private int count = positions.length;
 
 	private Handler handler = new Handler();
 	private Runnable batchAddMarkersRunnable = new Runnable() {
@@ -38,9 +53,9 @@ public class AddMarkersInBackgroundExampleActivity extends FragmentActivity {
 			if (count == 0) {
 				return;
 			}
-			// sortPositionsIfNeeded();
+			sortPositionsIfNeeded();
 			long start = SystemClock.uptimeMillis();
-			for (int i = 0; i < ADD_IN_BATCH; i++) {
+			for (int i = 0; i < ADD_IN_BATCH && count > 0; i++) {
 				count--;
 				LatLngDistance position = positions[count];
 				positions[count] = null;
@@ -56,10 +71,11 @@ public class AddMarkersInBackgroundExampleActivity extends FragmentActivity {
 			if (previousCameraPosition == null || LatLngUtils.distanceSquared(previousCameraPosition, cameraPosition) > 400.0) {
 				previousCameraPosition = cameraPosition;
 				long start = SystemClock.uptimeMillis();
-				for (LatLngDistance p : positions) {
+				for (int i = 0; i < count; i++) {
+					LatLngDistance p = positions[i];
 					p.distance = LatLngUtils.distanceSquared(cameraPosition, p.latLng);
 				}
-				Arrays.sort(positions, new Comparator<LatLngDistance>() {
+				Arrays.sort(positions, 0, count, new Comparator<LatLngDistance>() {
 					public int compare(LatLngDistance lhs, LatLngDistance rhs) {
 						return Double.compare(rhs.distance, lhs.distance);
 					}

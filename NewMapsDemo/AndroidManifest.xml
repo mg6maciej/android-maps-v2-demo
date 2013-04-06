@@ -46,6 +46,8 @@
         <activity android:name=".AddOnlyVisibleMarkersExampleActivity" />
         <activity android:name=".AddMarkersInBackgroundExampleActivity" />
         <activity android:name=".RetainInstanceExampleActivity" />
+        <activity android:name=".AnimateCameraChainingExampleActivity" />
+        <activity android:name=".AboutActivity" />
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
