@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <fragment
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/simple_map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="right"
+            android:layout_margin="20dp"
+            map:cameraTargetLat="51"
+            map:cameraTargetLng="20"
+            map:uiRotateGestures="false"
+            map:uiScrollGestures="false"
+            map:uiTiltGestures="false"
+            map:uiZoomControls="false"
+            map:uiZoomGestures="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus mi, porta id consectetur ut, commodo quis odio. Pellentesque et nunc sed sem porttitor sagittis. Mauris ac ante leo, id vulputate elit. In augue erat, placerat ut auctor non, vulputate et felis. Cras viverra blandit ligula, ac blandit nulla lacinia id. Suspendisse sodales, enim eget interdum eleifend, felis massa convallis nunc, euismod cursus orci nibh in arcu. Curabitur aliquam ante in sapien volutpat fermentum nec ut sem.
+\n\nPhasellus vehicula magna vel sapien laoreet in dapibus nulla facilisis. Nunc dignissim hendrerit eros, sit amet sodales lectus tempus non. Cras in mauris risus. Duis in turpis augue, ut laoreet est. Proin leo est, elementum ac convallis eu, sagittis in mauris. Cras purus purus, auctor auctor ullamcorper quis, dapibus at nibh. Nam auctor malesuada enim, ac suscipit urna pretium nec. Vestibulum in volutpat tortor. In a rutrum lectus. Aenean nec nunc nec nisi tempus suscipit. Donec varius ligula at ligula faucibus luctus.
+\n\nMorbi vestibulum sapien eget eros consectetur vehicula. Nam sit amet erat sed est consectetur interdum sit amet ac erat. Donec molestie mollis pulvinar. Curabitur nulla diam, malesuada quis faucibus vel, dapibus vitae mi. Phasellus at lacus odio, et facilisis velit. Vivamus pretium fermentum mi sit amet placerat. Sed id nisi augue. Proin in dui sit amet quam commodo auctor ut eu velit. Pellentesque bibendum, lorem eu aliquet ultrices, magna urna tempus felis, ut fermentum massa tortor quis risus. Proin tortor libero, luctus non posuere ac, convallis sed elit. Integer congue lacinia urna ac molestie. In sit amet interdum odio. Nunc vulputate, odio in tincidunt laoreet, felis turpis condimentum leo, eu aliquet massa eros sit amet enim.
+\n\nIn sagittis, felis quis dapibus varius, erat mi consequat odio, nec laoreet ipsum est a risus. Vivamus interdum rhoncus elementum. Phasellus a metus urna, vitae faucibus diam. Praesent at quam tellus, nec vehicula risus. Suspendisse erat metus, lobortis rhoncus feugiat ac, commodo sed enim. Mauris neque massa, lacinia vel lacinia nec, mollis ut odio. Pellentesque a elit ut ante adipiscing ultrices at vitae justo. Integer lacus ipsum, placerat in pulvinar non, consequat in libero. Phasellus at placerat mi.
+\n\nCras nulla risus, ullamcorper eget fringilla vitae, pulvinar eu velit. Sed ut volutpat massa. Sed tristique fermentum diam in ullamcorper. Integer quam diam, mollis in bibendum ac, egestas quis nulla. Fusce tempor lectus et lacus convallis feugiat. Quisque nibh dui, tincidunt eget tincidunt vitae, volutpat vitae odio. Duis at nisi felis, nec placerat nulla. Integer fermentum purus arcu, sit amet facilisis dui. Donec risus mi, accumsan eget bibendum in, bibendum sed nibh. Nam lacus enim, molestie at faucibus ut, fermentum vel nisi. Proin ultrices sem blandit risus tincidunt malesuada. Morbi lacus justo, pellentesque sit amet lobortis in, luctus eget turpis. Vestibulum commodo ligula sed lectus hendrerit imperdiet." />
+    </LinearLayout>
+
+</ScrollView>

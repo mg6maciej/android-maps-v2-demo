@@ -47,6 +47,9 @@
         <activity android:name=".AddMarkersInBackgroundExampleActivity" />
         <activity android:name=".RetainInstanceExampleActivity" />
         <activity android:name=".AnimateCameraChainingExampleActivity" />
+        <activity
+            android:name=".KnownBugsExampleActivity"
+            android:theme="@android:style/Theme.Light" />
         <activity android:name=".AboutActivity" />
 
         <meta-data

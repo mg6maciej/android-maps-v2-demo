@@ -36,7 +36,8 @@ public class MainActivity extends FragmentActivity {
 			new ExampleStartInfo(AddOnlyVisibleMarkersExampleActivity.class, "Add Only Visible Markers"),
 			new ExampleStartInfo(AddMarkersInBackgroundExampleActivity.class, "Add Markers In Background"),
 			new ExampleStartInfo(RetainInstanceExampleActivity.class, "Retain Instance (Don't)"),
-			new ExampleStartInfo(AnimateCameraChainingExampleActivity.class, "Animate Camera Chaining"), new ExampleStartInfo(AboutActivity.class, "About"), };
+			new ExampleStartInfo(AnimateCameraChainingExampleActivity.class, "Animate Camera Chaining"),
+			new ExampleStartInfo(KnownBugsExampleActivity.class, "Known Bugs"), new ExampleStartInfo(AboutActivity.class, "About"), };
 
 	private boolean available;
 
@@ -56,7 +57,7 @@ public class MainActivity extends FragmentActivity {
 			}
 		});
 	}
-	
+
 	@Override
 	protected void onResume() {
 		super.onResume();
